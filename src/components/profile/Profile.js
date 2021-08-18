@@ -1,25 +1,26 @@
+import stl from "./Profile.module.css";
+
 const Profile = ({ name, tag, location, avatar, stats }) => {
   return (
-    <div class="profile">
-      <div class="description">
-        <img src={avatar} alt={name} class="avatar" />
-        <p class="name">{name} </p>
-        <p class="tag">{tag} </p>
-        <p class="location">{location}</p>
+    <div className={stl.profile}>
+      <div className={stl.description}>
+        <img src={avatar} alt={name} className={stl.avatar} />
+        <p className={stl.name}>{name}</p>
+        <p className={stl.tag}>@{tag}</p>
+        <p className={stl.location}>{location}</p>
       </div>
-
-      <ul class="stats">
-        <li>
-          <span class="label">Followers</span>
-          <span class="quantity">{stats.followers}</span>
+      <ul className={stl.stats}>
+        <li className={stl.profileLi}>
+          <span className={stl.label}>Followers</span>
+          <span className={stl.quantity}>{stats.followers}</span>
         </li>
-        <li>
-          <span class="label">Views</span>
-          <span class="quantity">{stats.views}</span>
+        <li className={stl.profileLi}>
+          <span className={stl.label}>Views</span>
+          <span className={stl.quantity}>{stats.views}</span>
         </li>
-        <li>
-          <span class="label">Likes</span>
-          <span class="quantity">{stats.likes}</span>
+        <li className={stl.profileLi}>
+          <span className={stl.label}>Likes</span>
+          <span className={stl.quantity}>{stats.likes}</span>
         </li>
       </ul>
     </div>
