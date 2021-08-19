@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import stl from "./FriendList.module.css";
 
 const FriendList = ({ friends }) => {
@@ -15,3 +16,10 @@ const FriendList = ({ friends }) => {
 };
 
 export default FriendList;
+
+FriendList.propTypes = {
+  avatar: PropTypes.string,
+  name: PropTypes.string,
+  isOnline: PropTypes.bool,
+  id: PropTypes.string,
+};

@@ -1,4 +1,5 @@
 import stl from "./Profile.module.css";
+import PropTypes from "prop-types";
 
 const Profile = ({ name, tag, location, avatar, stats }) => {
   return (
@@ -25,6 +26,14 @@ const Profile = ({ name, tag, location, avatar, stats }) => {
       </ul>
     </div>
   );
+};
+
+Profile.propTypes = {
+  name: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  avatar: PropTypes.string,
+  stats: PropTypes.objectOf(PropTypes.string),
 };
 
 export default Profile;

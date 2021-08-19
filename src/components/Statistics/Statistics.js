@@ -1,4 +1,5 @@
 import stl from "./Statistics.module.css";
+import PropTypes from "prop-types";
 
 const Statistics = ({ title, stats }) => {
   return (
@@ -17,3 +18,9 @@ const Statistics = ({ title, stats }) => {
 };
 
 export default Statistics;
+
+Statistics.propTypes = {
+  id: PropTypes.string,
+  label: PropTypes.string,
+  percentage: PropTypes.number,
+};
