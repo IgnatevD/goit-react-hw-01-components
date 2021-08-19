@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const Statistics = ({ title, stats }) => {
   return (
     <section className={stl.statistics}>
-      {title.length > 0 && <h2 className={stl.title}>{title}</h2>}
+      {title.length && <h2 className={stl.title}>{title}</h2>}
       <ul className={stl.statList}>
         {stats.map(({ id, label, percentage }) => (
           <li className={stl.item} key={id}>
@@ -20,6 +20,7 @@ const Statistics = ({ title, stats }) => {
 export default Statistics;
 
 Statistics.propTypes = {
+  title: PropTypes.string,
   id: PropTypes.string,
   label: PropTypes.string,
   percentage: PropTypes.number,
