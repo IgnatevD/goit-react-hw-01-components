@@ -28,12 +28,12 @@ const Profile = ({ name, tag, location, avatar, stats }) => {
   );
 };
 
+export default Profile;
+
 Profile.propTypes = {
   name: PropTypes.string,
   tag: PropTypes.string,
   location: PropTypes.string,
   avatar: PropTypes.string,
-  stats: PropTypes.objectOf(PropTypes.string),
+  stats: PropTypes.objectOf(PropTypes.number),
 };
-
-export default Profile;

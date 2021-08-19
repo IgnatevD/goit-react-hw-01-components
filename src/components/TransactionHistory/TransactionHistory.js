@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 
 const TransactionHistory = ({ items }) => {
   return (
-    <table classNameName={s.transaction}>
-      <thead classNameName={s.thead}>
-        <tr classNameName={s.tr}>
+    <table className={s.transaction}>
+      <thead className={s.thead}>
+        <tr className={s.tr}>
           <th>Type</th>
           <th>Amount</th>
           <th>Currency</th>

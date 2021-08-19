@@ -6,6 +6,7 @@ import user from "../user.json";
 import statisticalData from "../statistical-data.json";
 import friends from "../friend-list.json";
 import transactions from "../transactions.json";
+import PropTypes from "prop-types";
 
 const App = () => {
   return (
@@ -25,3 +26,10 @@ const App = () => {
 };
 
 export default App;
+
+App.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.array,
+  friends: PropTypes.array,
+  items: PropTypes.array,
+};
