@@ -2,21 +2,22 @@ import Profile from "./profile/Profile";
 import Statistics from "./Statistics/Statistics";
 import FriendList from "./FriendList/FriendList";
 import TransactionHistory from "./TransactionHistory/TransactionHistory";
-import user from "../user.json";
-import statisticalData from "../statistical-data.json";
-import friends from "../friend-list.json";
-import transactions from "../transactions.json";
+import user from "../data-json/user.json";
+import statisticalData from "../data-json/statistical-data.json";
+import friends from "../data-json/friend-list.json";
+import transactions from "../data-json/transactions.json";
 import PropTypes from "prop-types";
 
 const App = () => {
+  const { name, tag, location, avatar, stats } = user;
   return (
     <>
       <Profile
-        name={user.name}
-        tag={user.tag}
-        location={user.location}
-        avatar={user.avatar}
-        stats={user.stats}
+        name={name}
+        tag={tag}
+        location={location}
+        avatar={avatar}
+        stats={stats}
       />
       <Statistics title="Upload stats" stats={statisticalData} />
       <Statistics stats={statisticalData} />
