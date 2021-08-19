@@ -2,9 +2,10 @@ import stl from "./Statistics.module.css";
 import PropTypes from "prop-types";
 
 const Statistics = ({ title, stats }) => {
+  console.log(title);
   return (
     <section className={stl.statistics}>
-      {title.length && <h2 className={stl.title}>{title}</h2>}
+      {title && <h2 className={stl.title}>{title}</h2>}
       <ul className={stl.statList}>
         {stats.map(({ id, label, percentage }) => (
           <li className={stl.item} key={id}>
